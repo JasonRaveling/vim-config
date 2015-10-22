@@ -1,3 +1,6 @@
+" let there be light!
+syntax on
+
 " remove the .ext~ files, but not the swapfiles
 set nobackup
 set writebackup
