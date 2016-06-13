@@ -20,10 +20,10 @@ ln -s $PWD/vimrc $vimrc;
 ########################################
 if [ ! -d $vimDir/colors ]; then
     echo "Creating 'colors' directory: ${vimDir}/colors";
-    mkdir $vimDir/colors;
+    mkdir "${vimDir}/colors";
 fi
 
-for s in `ls colors/*`; do ln -s $s $vimDir/colors/`basename $s`; done;
+for s in `ls colors/*`; do ln -s "${PWD}/${s}" "${vimDir}/colors/"`basename $s`; done;
 
 
 # set 256 color in terminal
@@ -47,7 +47,7 @@ if [ ! -d $vimDir/autoload ]; then
 fi
 
 echo "Adding Pathogen Plugin Manager";
-ln -s $PWD/plugins/vim-pathogen/autoload/pathogen.vim $vimDir/autoload/pathogen.vim;
+ln -s $PWD/plugins/vim-pathogen/autoload/pathogen.vim "${vimDir}/autoload/pathogen.vim";
 
 if [ ! -d $bundleDir ]; then
     mkdir $bundleDir;
