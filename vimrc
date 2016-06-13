@@ -33,3 +33,6 @@ set softtabstop=4   " Number of spaces per Tab
 set ruler " Show row and column ruler information
 set undolevels=1000 " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
+
+" Color Scheme / Theme
+colo jellybeans 
