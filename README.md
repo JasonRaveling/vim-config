@@ -10,6 +10,6 @@ Then create the symlink for .vimrc in your home directory.
 
 `ln -s vim-config/vimrc ~/.vimrc`
 
-**(Optional)** Then add the color scheme(s). If you already have color schemes be sure you aren't overwritting anything before running this command.
+**(Optional)** Then add the color scheme(s). If you already have color schemes be sure you aren't overwritting anything before running this command. If 256 color is not on already, enter `export TERM=xterm-256color` into your `.bashrc`.
 
 `cp -r vim-config/colors ~/.vim/`
