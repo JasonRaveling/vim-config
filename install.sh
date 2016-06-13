@@ -5,6 +5,7 @@
 # setup vars
 vimDir=$HOME/.vim;
 vimrc=$HOME/.vimrc;
+bundleDir=$HOME/.vim/bundle # dir that pathogen loads from
 
 # create link for .vimrc
 if [ -e $vimrc ]; then
@@ -16,6 +17,7 @@ ln -s $PWD/vimrc $vimrc;
 
 
 # create link for color schemes
+########################################
 if [ ! -d $vimDir/colors ]; then
     echo "Creating 'colors' directory: ${vimDir}/colors";
     mkdir $vimDir/colors;
@@ -32,6 +34,7 @@ fi
 
 
 # add plugins
+########################################
 if [ ! -d $vimDir/plugins ]; then
     echo "Creating 'plugins' directory: ${vimDir}/plugins";
     mkdir $vimDir/plugins;
@@ -43,5 +46,13 @@ if [ ! -d $vimDir/autoload ]; then
     mkdir $vimDir/autoload;
 fi
 
-echo "Adding pathogen.vim";
+echo "Adding Pathogen Plugin Manager";
 ln -s $PWD/plugins/vim-pathogen/autoload/pathogen.vim $vimDir/autoload/pathogen.vim;
+
+if [ ! -d $bundleDir ]; then
+    mkdir $bundleDir;
+fi
+
+# add nert tree
+echo "Adding Plugin: Nerd Tree";
+ln -s $PWD/plugins/nerdtree $bundleDir/
