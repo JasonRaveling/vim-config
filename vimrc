@@ -39,3 +39,6 @@ colo jellybeans
 
 " Add pathogen support for managing plugins
 execute pathogen#infect()
+
+" NERDTree
+autocmd vimenter * NERDTree
