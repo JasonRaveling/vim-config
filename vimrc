@@ -36,3 +36,6 @@ set backspace=indent,eol,start " Backspace behaviour
 
 " Color Scheme / Theme
 colo jellybeans 
+
+" Add pathogen support for managing plugins
+execute pathogen#infect()
