@@ -24,6 +24,7 @@ set incsearch	" Searches for strings incrementally
   
 " Indentation
 set autoindent	    " Auto-indent new lines
+set expandtab	    " Use spaces instead of tabs
 set shiftwidth=4    " Number of auto-indent spaces
 set smartindent	    " Enable smart-indent
 set smarttab	    " Enable smart-tabs
