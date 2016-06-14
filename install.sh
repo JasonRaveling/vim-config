@@ -23,8 +23,14 @@ if [ ! -d $vimDir/colors ]; then
     mkdir "${vimDir}/colors";
 fi
 
-for s in `ls colors/*`; do ln -s "${PWD}/${s}" "${vimDir}/colors/"`basename $s`; done;
+for s in `ls colors/*`
+do
+    colorLink="${vimDir}/colors/"`basename $s`;
 
+    if [ ! -e $colorLink ]; then
+        ln -s "${PWD}/${s}" $colorLink;
+    fi
+done
 
 # set 256 color in terminal
 if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then 
@@ -47,16 +53,22 @@ if [ ! -d $vimDir/autoload ]; then
 fi
 
 echo "Adding Pathogen Plugin Manager";
-ln -s $PWD/plugins/vim-pathogen/autoload/pathogen.vim "${vimDir}/autoload/pathogen.vim";
+if [ ! -e $vimDir/autoload/pathogen.vim ]; then
+    ln -s $PWD/plugins/vim-pathogen/autoload/pathogen.vim "${vimDir}/autoload/pathogen.vim";
+fi
 
 if [ ! -d $bundleDir ]; then
     mkdir $bundleDir;
 fi
 
 # add NERD tree
-echo "Adding Plugin: NERD Tree";
-ln -s $PWD/plugins/nerdtree $bundleDir/;
+if [ ! -e $bundleDir/nerdtree ]; then
+    echo "Adding Plugin: NERD Tree";
+    ln -s $PWD/plugins/nerdtree $bundleDir/;
+fi
 
 # add vim-css3-syntax
-echo "Adding Plugin: scss-syntax";
-ln -s $PWD/plugins/vim-css3-syntax $bundleDir/;
+if [ ! -e $bundleDir/vim-css3-syntax ]; then
+    echo "Adding Plugin: vim-css3-syntax";
+    ln -s $PWD/plugins/vim-css3-syntax $bundleDir/;
+fi
