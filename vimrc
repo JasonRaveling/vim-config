@@ -29,6 +29,7 @@ set shiftwidth=4    " Number of auto-indent spaces
 set smartindent	    " Enable smart-indent
 set smarttab	    " Enable smart-tabs
 set softtabstop=4   " Number of spaces per Tab
+set cindent         " Closing braces
    
 " Advanced
 set ruler " Show row and column ruler information
@@ -44,3 +45,9 @@ execute pathogen#infect()
 " NERDTree
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" vim-css3-syntax
+augroup VimCSS3Syntax
+    autocmd!
+    autocmd FileType css setlocal iskeyword+=-
+augroup END

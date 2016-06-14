@@ -53,6 +53,10 @@ if [ ! -d $bundleDir ]; then
     mkdir $bundleDir;
 fi
 
-# add nert tree
-echo "Adding Plugin: Nerd Tree";
-ln -s $PWD/plugins/nerdtree $bundleDir/
+# add NERD tree
+echo "Adding Plugin: NERD Tree";
+ln -s $PWD/plugins/nerdtree $bundleDir/;
+
+# add vim-css3-syntax
+echo "Adding Plugin: scss-syntax";
+ln -s $PWD/plugins/vim-css3-syntax $bundleDir/;
