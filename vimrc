@@ -1,7 +1,7 @@
 " let there be light!
 syntax on
 
-" remove the .ext~ files, but not the swapfiles
+" remove the .ext~ files, but not swapfiles
 set nobackup
 set writebackup
 set noswapfile
@@ -26,7 +26,6 @@ set incsearch	" Searches for strings incrementally
 set autoindent	    " Auto-indent new lines
 set expandtab	    " Use spaces instead of tabs
 set shiftwidth=4    " Number of auto-indent spaces
-set smartindent	    " Enable smart-indent
 set smarttab	    " Enable smart-tabs
 set softtabstop=4   " Number of spaces per Tab
 set cindent         " Closing braces

@@ -72,3 +72,10 @@ if [ ! -e $bundleDir/vim-css3-syntax ]; then
     echo "Adding Plugin: vim-css3-syntax";
     ln -s $PWD/plugins/vim-css3-syntax $bundleDir/;
 fi
+
+# add scss-syntax
+if [ ! -d $vimDir/syntax ]; then
+    mkdir $vimDir/syntax;
+fi
+
+ln -s $PWD/plugins/scss-syntax/syntax/scss.vim $vimDir/syntax/
