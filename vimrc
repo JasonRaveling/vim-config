@@ -43,3 +43,4 @@ execute pathogen#infect()
 
 " NERDTree
 autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
