@@ -6,12 +6,14 @@ set nobackup
 set writebackup
 set noswapfile
 
-" Color Scheme / Theme
-set background=dark
+" Color Scheme
+"set background=dark
 "let g:solarized_termcolors=256
 "let g:solarized_contrast="normal"
 "colorscheme solarized 
 
+" Theme: Hybrid
+set background=dark
 let g:hybrid_termcolors=256
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
@@ -40,6 +42,7 @@ set shiftwidth=4    " Number of auto-indent spaces
 set smarttab	    " Enable smart-tabs
 set softtabstop=4   " Number of spaces per Tab
 set cindent         " Closing braces
+
 " Advanced
 set ruler " Show row and column ruler information
 set undolevels=1000 " Number of undo levels
