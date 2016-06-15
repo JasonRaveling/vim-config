@@ -43,7 +43,7 @@ fi
 ########################################
 if [ ! -d $vimDir/indent ]; then
     echo "Creating directory: ${vimDir}/indent";
-    mkdir ${vimDir/indent;
+    mkdir ${vimDir}/indent;
 fi
 
 for ind in `ls indent/*`;
