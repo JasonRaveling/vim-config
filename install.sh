@@ -28,6 +28,7 @@ do
     colorLink="${vimDir}/colors/"`basename $s`;
 
     if [ ! -e $colorLink ]; then
+        echo "Adding color scheme: ${s}";
         ln -s "${PWD}/${s}" $colorLink;
     fi
 done
@@ -38,11 +39,26 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
     echo 'export TERM=xterm-256color' >> $HOME/.bashrc;
 fi
 
+# add indentation
+########################################
+if [ ! -d $vimDir/indent ]; then
+    echo "Creating directory: ${vimDir}/indent";
+fi
+
+for ind in `ls indent/*`;
+do
+    indentLink="${vimDir}/indent/"`basename $ind`;
+
+    if [ ! -e $indentLink ]; then
+        echo "Adding indent script: ${ind}";
+        ln -s "${PWD}/{$ind}" $indentLink;
+    fi
+done
 
 # add plugins
 ########################################
 if [ ! -d $vimDir/plugins ]; then
-    echo "Creating 'plugins' directory: ${vimDir}/plugins";
+    echo "Creating directory: ${vimDir}/plugins";
     mkdir $vimDir/plugins;
 fi
 
@@ -58,6 +74,7 @@ if [ ! -e $vimDir/autoload/pathogen.vim ]; then
 fi
 
 if [ ! -d $bundleDir ]; then
+    echo "Created directory: ${bundle}";
     mkdir $bundleDir;
 fi
 

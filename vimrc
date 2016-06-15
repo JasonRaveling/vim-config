@@ -40,11 +40,11 @@ set shiftwidth=4    " Number of auto-indent spaces
 set smarttab	    " Enable smart-tabs
 set softtabstop=4   " Number of spaces per Tab
 set cindent         " Closing braces
-   
 " Advanced
 set ruler " Show row and column ruler information
 set undolevels=1000 " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
+filetype plugin indent on " helps with indentation and file recognition
 
 " Add pathogen support for managing plugins
 execute pathogen#infect()
