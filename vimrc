@@ -6,6 +6,17 @@ set nobackup
 set writebackup
 set noswapfile
 
+" Color Scheme / Theme
+set background=dark
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="normal"
+"colorscheme solarized 
+
+let g:hybrid_termcolors=256
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme hybrid
+
 " Makes search act like search in modern browsers
 set incsearch
 
@@ -35,9 +46,6 @@ set ruler " Show row and column ruler information
 set undolevels=1000 " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
 
-" Color Scheme / Theme
-colo jellybeans 
-
 " Add pathogen support for managing plugins
 execute pathogen#infect()
 
@@ -50,3 +58,6 @@ augroup VimCSS3Syntax
     autocmd!
     autocmd FileType css setlocal iskeyword+=-
 augroup END
+
+" Indent BASH
+let g:sh_indent_case_labels=1
