@@ -39,6 +39,15 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
     echo 'export TERM=xterm-256color' >> $HOME/.bashrc;
 fi
 
+# for solarized color scheme
+if [ ! -d ${vimDir}/autoload ]; then
+    echo "Creating directory: ${vimDir}/autoload";
+    mkdir ${vimDir}/autoload;
+fi
+
+ln -s $PWD/autoload $vimDir/autoload;
+
+
 # add indentation
 ########################################
 if [ ! -d $vimDir/indent ]; then
