@@ -60,7 +60,7 @@ if [ ! -d $HOME/.kde/share/apps/konsole ]; then
     echo;
     read -p "Would you like to copy the color scheme files for Konsol (${HOME}/.kde/share/apps/konsole/) [Y/n] " answer;
 
-    if [ $answer == "Y" || $answer == "y" ]; then
+    if [ $answer == "Y" || $answer == "y" || $answer == "" ]; then
         mkdir $HOME/.kde/share/apps/konsole
     fi
 fi
