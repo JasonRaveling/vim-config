@@ -39,13 +39,35 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
     echo 'export TERM=xterm-256color' >> $HOME/.bashrc;
 fi
 
-# for solarized color scheme
+# for solarized color scheme (turn it on)
 if [ ! -d ${vimDir}/autoload ]; then
     echo "Creating directory: ${vimDir}/autoload";
     mkdir ${vimDir}/autoload;
 fi
 
 ln -s $PWD/autoload $vimDir/autoload;
+
+# add color schemes to Konsole
+if [ ! -d $HOME/.kde/share/apps/konsole ]; then
+    echo;
+    echo "Konsole configs were not found. Konsole is KDE's terminal application. If you do not use Konsole, you can answer \"N\" but you should probably add the needed color scheme to your terminal application so that Vim color schemes appear as intended."; 
+    echo;
+    read -p "Would you like to copy the color scheme files for Konsol (${HOME}/.kde/share/apps/konsole/) [Y/n] " answer;
+
+    if [ $answer == "Y" || $answer == "y" ]; then
+        mkdir $HOME/.kde/share/apps/konsole
+    fi
+fi
+
+for ks in `ls misc/konsole/*`
+do
+    konsoleColor="${HOME}/.kde/share/apps/konsole/"`basename $ks`;
+
+    echo "Adding Konsole color scheme: ${ks}";
+    ln -s "${PWD}/${ks}" $konsoleColor;
+done
+
+# find out if we should create Konsole colorscheme files
 
 
 # add indentation
