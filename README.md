@@ -18,7 +18,7 @@ and then make the new directory, containing the repo, your working directory.
 
 Create the symlink for .vimrc in your home directory.
 
-`ln -s vimrc $HOME/.vimrc`
+    ln -s vimrc $HOME/.vimrc
 
 **(Optional)** Then add the color scheme(s). If you already have color schemes be sure you aren't overwritting anything before running this command. If 256 color is not on already, enter `export TERM=xterm-256color` into your `.bashrc`. If you'd rather create symlinks, you can do that too. That way you only have to do `git pull` when updating this repo and everything will be up to date. If you use the line below, you'll have to run the command every time you update.
 
