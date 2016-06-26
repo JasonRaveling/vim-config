@@ -7,6 +7,12 @@ vimDir=$HOME/.vim;
 vimrc=$HOME/.vimrc;
 bundleDir=$HOME/.vim/bundle # dir that pathogen loads from
 
+# create .vim directory if it doesnt exist
+if [ ! -d $vimDir ]; then
+    echo ".vim does not exist. Creating it.";
+    mkdir ${HOME}/.vim;
+fi
+
 # create link for .vimrc
 if [ -e $vimrc ]; then
     echo '.vimrc already exists... backed up to .vimrcBACKUP';
