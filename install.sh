@@ -63,8 +63,10 @@ for ks in `ls misc/konsole/*`
 do
     konsoleColor="${HOME}/.kde/share/apps/konsole/"`basename $ks`;
 
-    echo "Adding Konsole color scheme: ${ks}";
-    ln -s "${PWD}/${ks}" $konsoleColor;
+    if [ ! `basename $ks` == "readme.md" ]; then
+        echo "Adding Konsole color scheme: ${ks}";
+        ln -s "${PWD}/${ks}" $konsoleColor;
+    fi
 done
 
 # find out if we should create Konsole colorscheme files
