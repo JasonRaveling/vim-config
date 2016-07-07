@@ -130,6 +130,15 @@ if [ ! -e $bundleDir/vim-css3-syntax ]; then
     ln -s $PWD/plugins/vim-css3-syntax $bundleDir/;
 fi
 
+# add vim-gitgutter
+if [ ! -e $bundleDir/vim-gitgutter ]; then
+    echo "Adding Plugin: vim-gitgutter";
+    ln -s $PWD/plugins/vim-gitgutter $bundleDir/;
+fi
+
+# add syntax
+########################################
+
 # add scss-syntax
 if [ ! -d $vimDir/syntax ]; then
     mkdir $vimDir/syntax;
