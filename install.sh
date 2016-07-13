@@ -14,7 +14,7 @@ if [ ! -d $vimDir ]; then
 fi
 
 # create link for .vimrc
-if [ -e $vimrc ]; then
+if [ -f $vimrc ]; then
     echo '.vimrc already exists... backed up to .vimrcBACKUP';
     mv $vimrc $HOME/.vimrcBACKUP;
 fi
@@ -58,7 +58,7 @@ if [ ! -d $HOME/.kde/share/apps/konsole ]; then
     echo;
     echo "Konsole configs were not found. Konsole is KDE's terminal application. If you do not use Konsole, you can answer \"N\" but you should probably add the needed color scheme to your terminal application so that Vim color schemes appear as intended."; 
     echo;
-    read -p "Would you like to copy the color scheme files for Konsol (${HOME}/.kde/share/apps/konsole/) [Y/n] " answer;
+    read -p "Would you like to copy the color scheme files for Konsole (${HOME}/.kde/share/apps/konsole/) [Y/n] " answer;
 
     if [[ $answer == "Y" || $answer == "y" || -z $answer ]]; then
         mkdir -p $HOME/.kde/share/apps/konsole;
