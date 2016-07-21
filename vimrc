@@ -59,6 +59,7 @@ execute pathogen#infect()
 " NERDTree
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " Show dotfiles by default
 
 " vim-css3-syntax
 augroup VimCSS3Syntax
