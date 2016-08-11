@@ -1,11 +1,10 @@
-#!/bin/bash
-
 # A small script that will install all symlinks for you. Use at your own risk. This will create symlinks in the respective vim directories in your home directory.
 
 # setup vars
 vimDir=$HOME/.vim;
 vimrc=$HOME/.vimrc;
 bundleDir=$HOME/.vim/bundle # dir that pathogen loads from
+scriptDir=`dirname $(readlink -f $0)`;
 
 # create .vim directory if it doesnt exist
 if [ ! -d $vimDir ]; then
@@ -45,7 +44,13 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
     echo 'export TERM=xterm-256color' >> $HOME/.bashrc;
 fi
 
-# for solarized color scheme (turn it on)
+# set solarized colors for all other of terminal
+if ! grep -q "eval `dircolors $scriptDir/misc/dir_colors/dircolors.256dark`" $HOME/.bashrc; then
+    echo 'Adding Solarized Dark support for other terminal applications.';
+    echo 'eval `dircolors '$scriptDir'/misc/dir_colors/dircolors.256dark`' >> $HOME/.bashrc;
+fi
+
+# auto load solarized theme in Vim
 if [ ! -d ${vimDir}/autoload ]; then
     echo "Creating directory: ${vimDir}/autoload";
     mkdir ${vimDir}/autoload;

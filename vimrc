@@ -13,15 +13,16 @@ set noswapfile
 "colorscheme solarized 
 
 " Theme: Hybrid
-set background=dark
-let g:hybrid_termcolors=256
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+"set background=dark
+"let g:hybrid_termcolors=256
+"let g:hybrid_custom_term_colors = 1
+"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+"colorscheme hybrid
 
 " Theme: Solarized
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 " Makes search act like search in modern browsers
 set incsearch
