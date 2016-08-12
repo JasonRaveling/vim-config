@@ -7,7 +7,7 @@ These configs were made using GNU/Linux (`echo $emacsRant > /dev/null`) but may 
 
 `git clone https://github.com/webunraveling/vim-config.git`
 
-and then make the new directory, containing the repo, your working directory.
+then make the new directory, containing the repo, your working directory.
 
 `cd vim-config`
 
@@ -15,11 +15,7 @@ and then make the new directory, containing the repo, your working directory.
 `chmod +x install.sh && ./install.sh`
 
 ### Manual
+Just place all of the directories from this repository into your `.vim` directory. If you already have a `.vim` directory then place the contents into their respective directories. Then place `vimrc` in your home directory, renamed to `.vimrc` (a dot file). Although, creating symlinks would be a better option than copying files as you can just run `git pull` when the repo is updated and there will be no need to copy all of the files again.
 
-Create the symlink for .vimrc in your home directory.
-
-    ln -s vimrc $HOME/.vimrc
-
-**(Optional)** Then add the color scheme(s). If you already have color schemes be sure you aren't overwritting anything before running this command. If 256 color is not on already, enter `export TERM=xterm-256color` into your `.bashrc`. If you'd rather create symlinks, you can do that too. That way you only have to do `git pull` when updating this repo and everything will be up to date. If you use the line below, you'll have to run the command every time you update.
-
-    for colorScheme in `ls $PWD/colors/*`; do ln -s $colorScheme ~/.vim/colors/; done;
+## Adding Color Schemes
+This is completely optional. If you already have color schemes be sure you aren't overwritting anything before running this command. If your XTERM doesn't already use 256 colors, add `export TERM=xterm-256color` to your `.bashrc`.
