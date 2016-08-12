@@ -7,10 +7,6 @@ set writebackup
 set noswapfile
 
 " Color Scheme
-"set background=dark
-"let g:solarized_termcolors=256
-"let g:solarized_contrast="normal"
-"colorscheme solarized 
 
 " Theme: Hybrid
 "set background=dark
@@ -20,6 +16,7 @@ set noswapfile
 "colorscheme hybrid
 
 " Theme: Solarized
+syntax reset
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
@@ -70,3 +67,4 @@ augroup END
 
 " Indent BASH
 let g:sh_indent_case_labels=1
+
