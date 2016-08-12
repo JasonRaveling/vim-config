@@ -5,11 +5,9 @@ The color schemes, plugins, etc. all have the files and content taken directly f
 ## Installation
 These configs were made using GNU/Linux (`echo $emacsRant > /dev/null`) but may work on other operating systems. To install, just open the terminal and do the following.
 
-`git clone https://github.com/webunraveling/vim-config.git`
+`git clone https://github.com/webunraveling/vim-config.git && cd vim-config`
 
-then make the new directory, containing the repo, your working directory.
-
-`cd vim-config`
+Then choose if you'd like to install automatically or manually.
 
 ### Automatic
 `chmod +x install.sh && ./install.sh`
@@ -18,4 +16,4 @@ then make the new directory, containing the repo, your working directory.
 Just place all of the directories from this repository into your `.vim` directory. If you already have a `.vim` directory then place the contents into their respective directories. Then place `vimrc` in your home directory, renamed to `.vimrc` (a dot file). Although, creating symlinks would be a better option than copying files as you can just run `git pull` when the repo is updated and there will be no need to copy all of the files again.
 
 ## Adding Color Schemes
-This is completely optional. If you already have color schemes be sure you aren't overwritting anything before running this command. If your XTERM doesn't already use 256 colors, add `export TERM=xterm-256color` to your `.bashrc`.
+This is completely optional. If you already have color schemes be sure you aren't overwritting anything before running this command. If your XTERM doesn't already use 256 colors, add `export TERM=xterm-256color` to your `.bashrc`. This is done for you if you use the automatic install script.
