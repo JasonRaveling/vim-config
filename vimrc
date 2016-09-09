@@ -8,7 +8,7 @@ set noswapfile
 
 " Set shell to use
 " Probably won't work on Windows
-set shell=/bin/bash
+set shell=/bin/sh
 
 " Color Scheme
 
@@ -38,7 +38,6 @@ set visualbell	    " Use visual bell (no beeping)
 " Search
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
-set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
   
 " Indentation
