@@ -6,6 +6,10 @@ set nobackup
 set writebackup
 set noswapfile
 
+" Set shell to use
+" Probably won't work on Windows
+set shell=/bin/bash
+
 " Color Scheme
 
 " Theme: Hybrid
