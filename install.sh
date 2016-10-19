@@ -100,6 +100,24 @@ do
     fi
 done
 
+# add syntax
+########################################
+
+if [ ! -d $vimDir/syntax ]; then
+    mkdir $vimDir/syntax;
+fi
+
+for syn in `ls syntax/*`;
+do
+    syntaxLink="${vimDir}/syntax/"`basename $syn`;
+
+    if [ ! -e $syntaxLink ]; then
+        echo "Adding syntax script: ${syn}";
+        ln -s "${PWD}/${syn}" $syntaxLink; 
+    fi
+done
+
+
 # add plugins
 ########################################
 if [ ! -d $vimDir/plugins ]; then
@@ -141,12 +159,3 @@ if [ ! -e $bundleDir/vim-gitgutter ]; then
     ln -s $PWD/plugins/vim-gitgutter $bundleDir/;
 fi
 
-# add syntax
-########################################
-
-# add scss-syntax
-if [ ! -d $vimDir/syntax ]; then
-    mkdir $vimDir/syntax;
-fi
-
-ln -s $PWD/plugins/scss-syntax/syntax/scss.vim $vimDir/syntax/
