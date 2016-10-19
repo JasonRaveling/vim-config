@@ -96,7 +96,7 @@ do
 
     if [ ! -e $indentLink ]; then
         echo "Adding indent script: ${ind}";
-        ln -s "${PWD}/{$ind}" $indentLink;
+        ln -s "${PWD}/${ind}" $indentLink;
     fi
 done
 
