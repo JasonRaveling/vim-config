@@ -58,7 +58,7 @@ filetype plugin indent on " helps with indentation and file recognition
 execute pathogen#infect()
 
 " NERDTree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree " open on load
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " Show dotfiles by default
 
