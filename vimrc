@@ -6,18 +6,11 @@ set nobackup
 set writebackup
 set noswapfile
 
-" Set shell to use
-" Probably won't work on Windows
+" Set which shell to use
+" Probably wont work on Windows
 set shell=/bin/sh
 
 " Color Scheme
-
-" Theme: Hybrid
-"set background=dark
-"let g:hybrid_termcolors=256
-"let g:hybrid_custom_term_colors = 1
-"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-"colorscheme hybrid
 
 " Theme: Solarized
 syntax reset
