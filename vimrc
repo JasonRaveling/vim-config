@@ -47,9 +47,6 @@ set undolevels=1000 " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
 filetype plugin indent on " helps with indentation and file recognition
 
-" Add pathogen support for managing plugins
-execute pathogen#infect()
-
 " NERDTree
 "autocmd vimenter * NERDTree " open on load
 map <C-n> :NERDTreeToggle<CR>
