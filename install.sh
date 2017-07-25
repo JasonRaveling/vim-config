@@ -7,9 +7,12 @@ bundleDir=$HOME/.vim/bundle # dir that pathogen loads from
 scriptDir=`dirname $(readlink -f $0)`;
 
 # warning message before proceeding
-read -p "BEORE YOU BEGIN: Be sure you have backed up your .vim directory and moved/renamed the vim-config directory (this repo) to .vim. Otherwise the configs will not work.\n\nHave you done this already? (y/N) " readyOrNot
-if [ $readyOrNot != [yY] ]; then
-    "Exited script."
+echo "BEORE YOU BEGIN: Be sure you have backed up your .vim directory and moved/renamed the vim-config directory (this repo) to .vim. Otherwise the configs will not work."
+echo
+read -p "Have you done this already? (y/N) " readyOrNot
+if [[ $readyOrNot != "y" && $readyOrNot != "Y" ]]; then
+    echo "Exited script."
+    echo
     exit;
 fi
 
@@ -37,8 +40,10 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
 fi
 
 # set solarized colors for everything in the terminal
-if ! grep -q "eval `dircolors $scriptDir/misc/dir_colors/dircolors.256dark`" $HOME/.bashrc; then
+if ! grep -q "dircolors.256dark" $HOME/.bashrc; then
     echo 'Adding Solarized Dark support to .bashrc.';
     echo 'eval `dircolors '$scriptDir'/misc/dir_colors/dircolors.256dark`' >> $HOME/.bashrc;
+else
+    echo 'dircolors.256color already present in .bashrc... skipping.'
 fi
 
