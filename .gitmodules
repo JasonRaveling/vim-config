@@ -1,0 +1,3 @@
+[submodule "pack/custom-pkgs/opt/vim-css3-syntax"]
+	path = pack/custom-pkgs/opt/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git

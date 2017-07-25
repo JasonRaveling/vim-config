@@ -46,4 +46,3 @@ if ! grep -q "dircolors.256dark" $HOME/.bashrc; then
 else
     echo 'dircolors.256color already present in .bashrc... skipping.'
 fi
-
