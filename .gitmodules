@@ -1,6 +1,0 @@
-[submodule "pack/start/nerdtree"]
-	path = pack/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "pack/start/vim-gitgutter"]
-	path = pack/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
