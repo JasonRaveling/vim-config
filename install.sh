@@ -7,7 +7,7 @@ bundleDir=$HOME/.vim/bundle # dir that pathogen loads from
 scriptDir=`dirname $(readlink -f $0)`;
 
 # warning message before proceeding
-echo "BEORE YOU BEGIN: Be sure you have backed up your .vim directory and moved/renamed the vim-config directory (this repo) to .vim. Otherwise the configs will not work."
+echo "BEFORE YOU BEGIN: Be sure you have backed up your .vim directory and moved/renamed the vim-config directory (this repo) to .vim. Otherwise the configs will not work."
 echo
 read -p "Have you done this already? (y/N) " readyOrNot
 if [[ $readyOrNot != "y" && $readyOrNot != "Y" ]]; then
