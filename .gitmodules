@@ -10,3 +10,6 @@
 [submodule "pack/custom-pkgs/start/vim-airline"]
 	path = pack/custom-pkgs/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/custom-pkgs/start/vim-fugitive"]
+	path = pack/custom-pkgs/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git

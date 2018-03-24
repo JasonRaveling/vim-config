@@ -47,6 +47,9 @@ set undolevels=1000 " Number of undo levels
 set backspace=indent,eol,start " Backspace behaviour
 filetype plugin indent on " helps with indentation and file recognition
 
+" vim-airline
+let g:airline#extensions#branch#enabled=1
+
 " NERDTree
 "autocmd vimenter * NERDTree " open on load
 map <C-n> :NERDTreeToggle<CR>
