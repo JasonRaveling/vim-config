@@ -7,3 +7,6 @@
 [submodule "pack/custom-pkgs/start/nerdtree"]
 	path = pack/custom-pkgs/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/custom-pkgs/start/vim-airline"]
+	path = pack/custom-pkgs/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
