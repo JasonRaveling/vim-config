@@ -48,7 +48,9 @@ set backspace=indent,eol,start " Backspace behaviour
 filetype plugin indent on " helps with indentation and file recognition
 
 " vim-airline
-let g:airline#extensions#branch#enabled=1
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#hunks#enabled=0  " show additions/removals in repo
+let g:airline#extensions#branch#enabled=1 " show the active git branch
 
 " NERDTree
 "autocmd vimenter * NERDTree " open on load
