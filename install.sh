@@ -159,3 +159,10 @@ if [ ! -e $bundleDir/vim-gitgutter ]; then
     ln -s $PWD/plugins/vim-gitgutter $bundleDir/;
 fi
 
+# add vim-airline
+if [ ! -e $bundleDir/vim-airline ]; then
+    echo "Adding Plugin: vim-airline";
+    ln -s $PWD/plugins/vim-airline $bundleDir/;
+fi
+
+
