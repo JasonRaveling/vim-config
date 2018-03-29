@@ -165,4 +165,15 @@ if [ ! -e $bundleDir/vim-airline ]; then
     ln -s $PWD/plugins/vim-airline $bundleDir/;
 fi
 
+# add vim-airline-themes
+if [ ! -e $bundleDir/vim-airline-theme ]; then
+    echo "Adding Plugin: vim-airline-themes";
+    ln -s $PWD/plugins/vim-airline-themes $bundleDir/;
+fi
+
+# add vim-fugitive
+if [ ! -e $bundleDir/vim-fugitive ]; then
+    echo "Adding Plugin: vim-fugitive";
+    ln -s $PWD/plugins/vim-fugitive $bundleDir/;
+fi
 

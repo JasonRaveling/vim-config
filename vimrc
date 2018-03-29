@@ -61,6 +61,15 @@ augroup VimCSS3Syntax
     autocmd FileType css setlocal iskeyword+=-
 augroup END
 
+" vim-airline
+let g:airline_theme='base16_solarized'
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline_enable_syntastic  = 1
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+
 " Indent BASH
 let g:sh_indent_case_labels=1
 

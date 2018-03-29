@@ -1,3 +1,5 @@
+Mainly keeping Vim7 configs alive for working serverside. There are still a lot of servers that haven't updated to Vim8.
+
 These configs are aimed at being used in the terminal for web development (PHP, JS, CSS, SASS). Although, it should work with pretty much any languages. Afterall its Vim. While these configs are meant for terminal they should work well with gVim too.
 
 The color schemes, plugins, etc. all have the files and content taken directly from their repos or source for easy updating from the original source when needed.
