@@ -62,6 +62,7 @@ augroup VimCSS3Syntax
 augroup END
 
 " vim-airline
+let g:airline_theme = 'powerlineish'
 let g:airline_theme='base16_solarized'
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline_enable_syntastic  = 1
