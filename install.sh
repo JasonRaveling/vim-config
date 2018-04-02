@@ -45,7 +45,7 @@ if ! grep -q "export TERM=xterm-256color" $HOME/.bashrc; then
 fi
 
 # set solarized colors for all other of terminal
-if ! grep -q "eval `dircolors $scriptDir/misc/dir_colors/dircolors.256dark`" $HOME/.bashrc; then
+if ! grep -q "eval `/misc/dir_colors/dircolors.256dark`" $HOME/.bashrc; then
     echo 'Adding Solarized Dark support for other terminal applications.';
     echo 'eval `dircolors '$scriptDir'/misc/dir_colors/dircolors.256dark`' >> $HOME/.bashrc;
 fi
