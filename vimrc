@@ -51,7 +51,6 @@ filetype plugin indent on " helps with indentation and file recognition
 let g:airline_theme = 'base16_solarized'
 let g:airline_powerline_fonts = 1 " use the font? https://github.com/powerline/fonts
 let g:airline#extensions#hunks#enabled= 0  " show additions/removals in repo
-let g:airline#extensions#branch#enabled= 1 " show the active git branch
 let g:airline#extensions#tabline#enabled = 1 " show buffer tabs at top of screen
 " let g:airline_left_sep = '»' " with powerline-fonts you don't need these
 " lines
