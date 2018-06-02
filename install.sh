@@ -177,3 +177,9 @@ if [ ! -e $bundleDir/vim-fugitive ]; then
     ln -s $PWD/plugins/vim-fugitive $bundleDir/;
 fi
 
+# add vim-blade
+if [ ! -e $bundleDir/vim-blade ]; then
+    echo "Adding Plugin: vim-blade";
+    ln -s $PWD/plugins/vim-blade $bundleDir/;
+fi
+
