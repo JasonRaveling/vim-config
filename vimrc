@@ -10,6 +10,10 @@ set noswapfile
 " Probably wont work on Windows
 set shell=/bin/sh
 
+" terminal type
+set term=xterm-256color
+set t_ut= " left blank to reset value
+
 " Color Scheme
 
 " Theme: Solarized
